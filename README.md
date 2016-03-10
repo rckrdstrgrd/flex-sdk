@@ -1,2 +1,2 @@
 # flex-sdk
-Adobe Flex SDK
+Adobe Flex SDK build env in a docker container
