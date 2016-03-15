@@ -5,4 +5,4 @@ VOLUME /output
 VOLUME /src
 COPY ./build.sh /build.sh
 RUN chmod +x build.sh
-CMD [ "build.sh,"-t ${BUILD_TYPE}"]
+CMD [ "build.sh","-t ${BUILD_TYPE}"]
