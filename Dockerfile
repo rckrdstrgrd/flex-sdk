@@ -3,4 +3,5 @@ RUN mkdir /src
 RUN mkdir /output
 VOLUME /output
 VOLUME /src
-CMD [ "/bin/bash", "-c", "/flex_sdk_4.6/bin/mxmlc -o /output/${TARGET}.swf /src/${TARGET}.mxml"]
+COPY ./build.sh /build.sh 
+CMD [ "/bin/bash", "-c", "build.sh -t ${BUILD_TYPE}"]
