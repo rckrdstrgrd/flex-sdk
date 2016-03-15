@@ -8,7 +8,7 @@ while getopts ":t:" opt; do
 			exit 1
  			;;
 			as)
-			/flex_sdk_4.6/bin/mxmlc -o /output/${TARGET}.swf /src/${TARGET}.as
+			/flex_sdk_4.6/bin/mxmlc -o /output/${TARGET}.swf /src/${TARGET}.as -static-link-runtime-shared-libraries=true
 			exit 1
 			;;
 		esac
@@ -18,7 +18,7 @@ while getopts ":t:" opt; do
       	exit 1
       	;;
     :)
-      echo "Option -$OPTARG requires an argument, releae or debug." >&2
+      echo "Option -$OPTARG requires an argument." >&2
       exit 1
       ;;
   esac
