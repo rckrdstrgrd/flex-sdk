@@ -3,5 +3,6 @@ RUN mkdir /src
 RUN mkdir /output
 VOLUME /output
 VOLUME /src
-COPY ./build.sh /build.sh 
-CMD [ "/bin/bash", "-c", "build.sh -t ${BUILD_TYPE}"]
+COPY ./build.sh /build.sh
+RUN chmod +x build.sh
+CMD [ "build.sh,"-t ${BUILD_TYPE}"]

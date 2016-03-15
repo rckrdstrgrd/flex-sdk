@@ -1,6 +1,6 @@
 #!/bin/bash 
 while getopts ":t:" opt; do
-  case $opt in
+	case $opt in
     t)
 		case $OPTARG in
 			mxml)
