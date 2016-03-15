@@ -8,7 +8,7 @@ while getopts ":t:" opt; do
 			exit 1
  			;;
 			as)
-			/flex_sdk_4.6/bin/mxmlc -o /output/${TARGET}.swf /src/${TARGET}.as -static-link-runtime-shared-libraries=true
+			/flex_sdk_4.6/bin/mxmlc -o /output/${TARGET}.swf /src/${TARGET}.as -static-link-runtime-shared-libraries=true -source-path=/src
 			exit 1
 			;;
 		esac
