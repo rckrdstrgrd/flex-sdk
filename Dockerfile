@@ -4,5 +4,6 @@ RUN mkdir /output
 VOLUME /output
 VOLUME /src
 COPY ./build.sh /build.sh
-RUN chmod +x build.sh
-CMD [ "/build.sh","-t ${BUILD_TYPE}"]
+COPY ./run.sh /run.sh
+RUN chmod +x build.sh && chmod +x run.sh
+CMD [ "/run.sh"]
